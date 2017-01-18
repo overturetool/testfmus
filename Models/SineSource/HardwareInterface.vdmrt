@@ -1,0 +1,23 @@
+--##	EXPORT	3bf7ea689fd79da13a0d4cc617b145b3be2c4e7b	SineSource.fmu	2017-18-01 14:54:32	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	5356d10312fae51face83bbabfde0e47b79a828d	SineSource.fmu	2017-18-01 14:43:35	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	9d6b957e53d660b5d07e24d0c38734ef5dbac533	SineSource.fmu	2017-18-01 14:31:49	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+class HardwareInterface
+
+-- OUTPUT VARIABLES
+instance variables
+
+  -- @ interface: type = output, name="out";
+  public output: RealPort := new RealPort(0.0);
+
+values
+
+	-- @ interface: type = parameter, name="frequency";
+	public static frequency : RealPort = new RealPort(100);
+
+	-- @ interface: type = parameter, name="amplitude";
+	public static amplitude : RealPort = new RealPort(1.0);
+	
+	-- @ interface: type = parameter, name="omega";
+	public static omega : RealPort = new RealPort(1.0);	
+ 
+end HardwareInterface

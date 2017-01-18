@@ -1,0 +1,1 @@
+{"fmus":{"{source}":"SineSource.fmu","{listener}":"Listener.fmu"},"connections":{"{source}.instance.out":["{listener}.instance.in"]},"parameters":{"{source}.instance.amplitude":1,"{source}.instance.omega":1,"{source}.instance.frequency":100}}

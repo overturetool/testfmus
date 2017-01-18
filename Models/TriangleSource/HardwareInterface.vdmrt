@@ -1,0 +1,29 @@
+--##	EXPORT	cd652a3f9cbf4d80f5af8893f8546b7c0be6aca4	TriangleSource.fmu	2017-18-01 15:29:52	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	b02d857bc1c336067b260f0216c1c442f10e1a7f	TriangleSource.fmu	2017-18-01 15:25:15	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	5720ee7c708ea260f7e371042ac2b102612334db	SquareSource.fmu	2017-18-01 15:01:50	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	90f5ea56d069cbc65764a2aa39f9ffed1b7fecc4	SquareSource.fmu	2017-18-01 14:59:31	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	9cda30235a40203a3957c46fb25217da03337197	SquareSource.fmu	2017-18-01 14:55:15	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	a4fc69c9109f0977a164faadb449fdb47a84febe	SquareSource.fmu	2017-18-01 14:54:50	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	67ce6e44a760b5c2789c763f4365d6e0a75c826a	SquareSource.fmu	2017-18-01 14:54:41	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	3b4ac50406b2f91ac2c835bc597854ad89263ac5	SquareSource.fmu	2017-18-01 14:53:52	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	87aee9213229415f51e687004d469107936c3735	SquareSource.fmu	2017-18-01 14:49:40	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+class HardwareInterface
+
+-- OUTPUT VARIABLES
+instance variables
+
+  -- @ interface: type = output, name="out";
+  public output: RealPort := new RealPort(0.0);
+
+values
+
+	-- @ interface: type = parameter, name="frequency";
+	public static frequency : RealPort = new RealPort(100);
+
+	-- @ interface: type = parameter, name="amplitude";
+	public static amplitude : RealPort = new RealPort(1.0);
+	
+	-- @ interface: type = parameter, name="omega";
+	public static omega : RealPort = new RealPort(1.0);	
+ 
+end HardwareInterface

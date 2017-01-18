@@ -1,0 +1,11 @@
+--##	EXPORT	fe573eb74c755d131fbe9cdc506bc10d8b7808b7	Listener.fmu	2017-18-01 11:51:18	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+--##	EXPORT	cdb87ce9b4208e40c97dff852568f80b78f14f80	Listener.fmu	2017-18-01 11:49:31	tool-wrapper	{"name":"fmu-import-export","version":"0.1.7-SNAPSHOT"}
+class HardwareInterface
+
+-- OUTPUT VARIABLES
+instance variables
+
+  -- @ interface: type = input, name="in";
+  public input: RealPort := new RealPort(0.0);
+ 
+end HardwareInterface

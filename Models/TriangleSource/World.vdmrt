@@ -1,0 +1,17 @@
+class World
+
+operations
+
+-- run a simulation
+public run : () ==> ()
+run() == (
+  start(System`controller);
+  block();
+);
+
+-- wait for simulation to finish
+block : () ==> ()
+block() == skip;
+sync per block => false;
+
+end World

@@ -1,0 +1,25 @@
+class Controller
+
+instance variables
+
+input: RealPort := new RealPort(0.0);
+
+values
+
+operations
+
+	-- constructor for Controller
+	public Controller: RealPort ==> Controller
+	Controller(input_) == (
+		input := input_
+ 	);
+
+	-- main loop
+	public Step: () ==> ()
+	Step() == (
+		IO`println(input.getValue())
+	);
+	  
+thread periodic(1e7,0,0,0)(Step)	  
+	  
+end Controller

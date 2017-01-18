@@ -1,0 +1,1 @@
+{"startTime":0,"endTime":3.14159,"multimodel_path":"Multi-models\\Sine\\mm.json","livestream":{"{source}.instance":["out"]},"visible":false,"loggingOn":true,"overrideLogLevel":"INFO","enableAllLogCategoriesPerInstance":true,"algorithm":{"type":"fixed-step","size":0.1}}

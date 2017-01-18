@@ -1,0 +1,51 @@
+class Controller
+
+instance variables
+
+-- output of FMU
+output: RealPort := new RealPort(0.0);
+
+-- thread period
+private period: nat := 1E7;
+
+private amplitude: real := 1.0;
+private omega: real := 1.0;
+
+values
+
+operations
+
+	-- constructor for Controller
+	public Controller: RealPort ==> Controller
+	Controller(out) == (
+		output := out;
+		period := frequency_to_period(System`hwi.frequency.getValue());
+		amplitude := System`hwi.amplitude.getValue();
+		omega := System`hwi.omega.getValue();
+ 	);
+
+	-- main loop
+	public Step: () ==> ()
+	Step() == (
+		let s = sign(MATH`sin(omega * time / 1e9)) in 
+			if(s = 0) then
+				output.setValue(amplitude)
+			else
+				output.setValue((amplitude / 2) * (s + 1))
+	);
+	  
+thread periodic(period,0,0,0)(Step)	  
+
+functions 
+
+-- convert frequency to period in nanoseconds
+private frequency_to_period: real -> nat
+frequency_to_period(f) == floor 1E9/f;
+
+private sign: real -> int
+sign(x) == 
+		if x < 0 then -1
+		elseif x > 0 then 1
+		else 0
+	  
+end Controller

@@ -1,0 +1,1 @@
+{"startTime":0,"endTime":1,"multimodel_path":"Multi-models\\Triangle\\mm.json","livestream":{"{source}.instance":["out"]},"visible":false,"loggingOn":true,"overrideLogLevel":"INFO","enableAllLogCategoriesPerInstance":true,"algorithm":{"type":"fixed-step","size":0.01}}
